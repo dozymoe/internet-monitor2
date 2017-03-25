@@ -16,5 +16,17 @@
     "setup_modules": [
         "fireh_runner.setup_modules.python",
         "fireh_runner.setup_modules.pybuildtool"
-    ]
+    ],
+
+    "configuration": {
+        "development": {
+            "monitor": {
+                "shell_env": {
+                    "CONFIG_FILENAMES": [
+                        "etc/development/monitor.json"
+                    ]
+                }
+            }
+        }
+    }
 }

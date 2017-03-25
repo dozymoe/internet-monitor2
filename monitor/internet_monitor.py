@@ -7,17 +7,10 @@ from core.application import Application
 
 basicConfig(level=DEBUG)
 
-SETTINGS = {
-    'monitored_networks': {
-        'wlp0s16f0u1u1u4': {'active': True, 'test_ip': '139.162.40.170'},
-        'wlp0s18f2u4': {'active': True, 'test_ip': '139.162.40.170'},
-    },
-}
-
 loop = asyncio.get_event_loop()
 try:
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    app = Application(loop, base_dir, SETTINGS)
+    app = Application(loop, base_dir)
     try:
         loop.add_signal_handler(SIGINT, app.shutdown)
         loop.add_signal_handler(SIGTERM, app.shutdown)

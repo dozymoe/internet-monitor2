@@ -1,0 +1,12 @@
+{
+    "monitored_networks": {
+        "wlp0s16f0u1u1u4": {
+            "active": true,
+            "test_ip": "139.162.40.170"
+        },
+        "wlp0s18f2u4": {
+            "active": true,
+            "test_ip": "139.162.40.170"
+        }
+    }
+}

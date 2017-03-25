@@ -39,7 +39,7 @@ class Application(object):
     syslog_handler = None
 
 
-    def __init__(self, loop, base_dir, user_settings):
+    def __init__(self, loop, base_dir, user_settings=None):
         self.logger = getLogger(type(self).__name__)
         self.loop = loop
         self.base_dir = base_dir
@@ -49,7 +49,9 @@ class Application(object):
 
         settings = copy(DEFAULT_SETTINGS)
         load_files_from_shell(settings)
-        settings.update(user_settings)
+        if user_settings is not None:
+            settings.update(user_settings)
+
         self.settings = dict(flatten_dict(
                 None,
                 settings,
