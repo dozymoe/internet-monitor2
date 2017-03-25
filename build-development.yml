@@ -1,0 +1,22 @@
+monitor:
+
+    options:
+        pylint_config_file: etc/pylint.rc
+        pylint_work_dir: "{_1}/"
+
+
+    pylint:
+        raw_file_in: "{_1}/*.py"
+        token_out: "{_1}:{_2}"
+
+
+    core:
+        pylint:
+            raw_file_in: "{_1}/{_2}/*.py"
+            token_out: "{_1}:{_2}:{_3}"
+
+
+    misc:
+        pylint:
+            raw_file_in: "{_1}/{_2}/*.py"
+            token_out: "{_1}:{_2}:{_3}"

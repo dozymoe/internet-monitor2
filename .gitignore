@@ -1,0 +1,33 @@
+/etc/runner.json
+
+
+## git
+
+*.orig
+
+
+## pybuildtool
+
+/wscript
+/build.yml
+/requirements.txt
+/.BUILD/
+
+
+## python
+
+/.virtualenv/
+/python_modules
+*.pyc
+__pycache__/
+
+
+## vim
+
+*.swo
+*.swp
+
+
+## waf
+
+/.lock-waf*

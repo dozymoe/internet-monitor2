@@ -1,0 +1,20 @@
+{
+    "package_name": "internet-monitor",
+    "default_project": "monitor",
+    "default_variant": "development",
+    "virtualenv_dir": ".virtualenv",
+    "python_version": "3.5",
+    "waf_version": "1.9.8",
+
+    "modules": [
+        "fireh_runner.modules.setup",
+        "fireh_runner.modules.pip",
+        "fireh_runner.modules.waf",
+
+        "scripts.fireh_runner_modules.monitor"
+    ],
+    "setup_modules": [
+        "fireh_runner.setup_modules.python",
+        "fireh_runner.setup_modules.pybuildtool"
+    ]
+}
